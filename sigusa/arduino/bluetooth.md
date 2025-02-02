@@ -1,14 +1,9 @@
 # Bluetooth
 
-header file
-
-```cpp
-#include "BluetoothSerial.h"
-```
-
 ## How To Use
 
 ```cpp
+#include "BluetoothSerial.h"
 
 String device_name = "SIGUSA";
 
@@ -34,6 +29,7 @@ void loop() {
     }
     // phone to esp
     if (SerialBT.available()) {
+        // return Type is int read() function.
         Serial.write(SerialBT.read());
     }
 }
